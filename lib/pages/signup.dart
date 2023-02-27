@@ -41,7 +41,7 @@ class _SignupPageState extends State<SignupPage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             const Text(
-              'Login',
+              'Sign Up',
               style: TextStyle(
                 fontSize: 32.0,
                 fontWeight: FontWeight.bold,
