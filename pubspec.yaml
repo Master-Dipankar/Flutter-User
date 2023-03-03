@@ -91,3 +91,8 @@ flutter:
 flutter_web:
   compiler:
     web: dart2js
+
+  dependencies:
+    flutter:
+      sdk:flutter
+    footer:
