@@ -1,21 +1,15 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
-import 'package:user/pages/transaction.dart';
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+
+class Transaction extends StatefulWidget {
+  const Transaction({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _LoginPageState createState() => _LoginPageState();
-  void navigateToTransaction(BuildContext context) async {
-    final result = await Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const Transaction()),
-    );
-    // handle the result here
-  }
+  _TransactionState createState() => _TransactionState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _TransactionState extends State<Transaction> {
   // late String _email;
   // late String _password;
 
@@ -46,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             const Text(
-              'Login',
+              'Transaction',
               style: TextStyle(
                 fontSize: 32.0,
                 fontWeight: FontWeight.bold,
@@ -81,9 +75,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {
-                // TODO
-              },
+              onPressed: (){},
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.blue,
@@ -103,3 +95,4 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
