@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:user/pages/transaction.dart';
+import 'package:user/pages/transaction2.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -9,7 +10,7 @@ class LoginPage extends StatefulWidget {
   void navigateToTransaction(BuildContext context) async {
     final result = await Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const Transaction()),
+      MaterialPageRoute(builder: (context) => const Transaction2()),
     );
     // handle the result here
   }
@@ -81,9 +82,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {
-                // TODO
-              },
+              onPressed: navigateToTransaction2,
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.blue,
@@ -100,6 +99,13 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
       ),
+    );
+  }
+
+  void navigateToTransaction2() async {
+    final login = await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const Transaction2()),
     );
   }
 }
