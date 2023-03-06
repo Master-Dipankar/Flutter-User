@@ -7,13 +7,13 @@ class LoginPage extends StatefulWidget {
   @override
   // ignore: library_private_types_in_public_api
   _LoginPageState createState() => _LoginPageState();
-  void navigateToTransaction(BuildContext context) async {
-    final result = await Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const Transaction2()),
-    );
-    // handle the result here
-  }
+  // void navigateToTransaction(BuildContext context) async {
+  //   // final result = await Navigator.push(
+  //   //   context,
+  //   //   MaterialPageRoute(builder: (context) => const Transaction2()),
+  //   // );
+  //   // handle the result here
+  // }
 }
 
 class _LoginPageState extends State<LoginPage> {
@@ -82,7 +82,13 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: navigateToTransaction2,
+              // onPressed: navigateToTransaction2,
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder:(context)=> const Transaction2()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.blue,
@@ -102,10 +108,10 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  void navigateToTransaction2() async {
-    final login = await Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const Transaction2()),
-    );
-  }
+  // void navigateToTransaction2() async {
+  //   final login = await Navigator.push(
+  //     context,
+  //     MaterialPageRoute(builder: (context) => const Transaction2()),
+  //   );
+  // }
 }
